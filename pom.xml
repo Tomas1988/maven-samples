@@ -4,23 +4,30 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.example.maven-samples</groupId>
-  <artifactId>your-artifact-id</artifactId>
+  <artifactId>parent</artifactId>
+  <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
+  <name>Parent</name>
+  <description>Just a pom that makes it easy to build both projects at the same time.</description>
 
-  <properties>
-    <maven.compiler.source>17</maven.compiler.source>
-    <maven.compiler.target>17</maven.compiler.target>
-  </properties>
+  <modules>
+    <module>multi-module</module>
+    <module>single-module</module>
+  </modules>
+
+  <prerequisites>
+    <maven>3.0.3</maven>
+  </prerequisites>
 
   <build>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.10.1</version> <!-- Usa una versión actual -->
+        <version>3.8.1</version>
         <configuration>
-          <source>${maven.compiler.source}</source>
-          <target>${maven.compiler.target}</target>
+          <source>1.8</source>
+          <target>1.8</target>
         </configuration>
       </plugin>
     </plugins>
