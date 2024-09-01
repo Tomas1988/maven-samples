@@ -65,9 +65,16 @@
       </plugin>
 
       <plugin>
-        <groupId>org.mortbay.jetty</groupId>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-failsafe-plugin</artifactId>
+        <version>3.0.0-M5</version>
+      </plugin>
+
+      <!-- Reemplazo del jetty-maven-plugin con una versión actual -->
+      <plugin>
+        <groupId>org.eclipse.jetty</groupId>
         <artifactId>jetty-maven-plugin</artifactId>
-        <version>8.0.0.M1</version>
+        <version>11.0.14</version>
       </plugin>
     </plugins>
   </build>
@@ -135,12 +142,14 @@
       <groupId>javax.servlet</groupId>
       <artifactId>servlet-api</artifactId>
       <version>2.5</version>
+      <scope>provided</scope>
     </dependency>
 
     <dependency>
       <groupId>javax.servlet.jsp</groupId>
       <artifactId>jsp-api</artifactId>
       <version>2.2</version>
+      <scope>provided</scope>
     </dependency>
 
     <dependency>
@@ -184,3 +193,4 @@
   </prerequisites>
 
 </project>
+
