@@ -90,7 +90,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-pmd-plugin</artifactId>
-          <version>3.18.0</version>
+          <version>3.19.0</version>
         </plugin>
 
         <plugin>
@@ -169,6 +169,7 @@
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>findbugs-maven-plugin</artifactId>
       </plugin>
+     
 
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
@@ -190,7 +191,15 @@
         <artifactId>jsp-api</artifactId>
         <version>2.2</version>
       </dependency>
+             
+      <dependency>
+        <groupId>org.fusesource.jansi</groupId>
+        <artifactId>jansi</artifactId>
+         <version>2.0.0</version> <!-- Cambia a una versión que sea compatible con el plugin -->
+       </dependency>
 
+
+             
       <dependency>
         <groupId>junit</groupId>
         <artifactId>junit</artifactId>
