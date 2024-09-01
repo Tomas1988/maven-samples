@@ -24,7 +24,7 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit-dep</artifactId>
-     <!--  <version>4.13.2</version> Especificar la versión -->
+     <version>4.13.2</version> <!--  Especificar la versión -->
       <scope>test</scope>
     </dependency>
 
