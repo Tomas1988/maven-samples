@@ -23,7 +23,7 @@
     <!-- Añadir la versión para junit-dep -->
     <dependency>
       <groupId>junit</groupId>
-      <artifactId>junit-dep</artifactId>
+      <artifactId>junit</artifactId>
      <version>4.13.2</version> <!--  Especificar la versión -->
       <scope>test</scope>
     </dependency>
