@@ -9,12 +9,15 @@
   <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
   <name>Multi Module Project Parent</name>
-  <description>Sample multi module Maven project with a working, deployable site.</description>
+  <description>Sample multi-module Maven project with a working, deployable site.</description>
   <url>http://www.example.com</url>
 
   <properties>
-    <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>utf-8</project.reporting.outputEncoding>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
+    <maven.site.version>3.11.0</maven.site.version>
   </properties>
 
   <modules>
@@ -33,41 +36,52 @@
   <build>
     <plugins>
       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.10.1</version>
         <configuration>
-          <source>1.6</source>
-          <target>1.6</target>
+          <source>${maven.compiler.source}</source>
+          <target>${maven.compiler.target}</target>
         </configuration>
       </plugin>
 
       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-release-plugin</artifactId>
+        <version>3.0.0-M2</version>
         <configuration>
           <autoVersionSubmodules>true</autoVersionSubmodules>
         </configuration>
       </plugin>
 
       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-site-plugin</artifactId>
+        <version>${maven.site.version}</version>
         <configuration>
           <reportPlugins>
             <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-checkstyle-plugin</artifactId>
             </plugin>
 
             <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-jxr-plugin</artifactId>
             </plugin>
 
             <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-javadoc-plugin</artifactId>
             </plugin>
 
             <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-pmd-plugin</artifactId>
             </plugin>
 
             <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-surefire-report-plugin</artifactId>
             </plugin>
 
@@ -88,64 +102,75 @@
     <pluginManagement>
       <plugins>
         <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-checkstyle-plugin</artifactId>
-          <version>2.8</version>
+          <version>3.2.2</version>
         </plugin>
 
         <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>2.3.2</version>
+          <version>3.10.1</version>
         </plugin>
 
         <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-javadoc-plugin</artifactId>
-          <version>2.8</version>
+          <version>3.4.1</version>
         </plugin>
 
         <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-jxr-plugin</artifactId>
           <version>2.3</version>
         </plugin>
 
         <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-pmd-plugin</artifactId>
-          <version>2.6</version>
+          <version>3.18.0</version>
         </plugin>
 
         <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-project-info-reports-plugin</artifactId>
-          <version>2.4</version>
+          <version>3.2.0</version>
         </plugin>
 
         <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-release-plugin</artifactId>
-          <version>2.2.1</version>
+          <version>3.0.0-M2</version>
         </plugin>
 
         <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-resources-plugin</artifactId>
-          <version>2.5</version>
+          <version>3.2.0</version>
         </plugin>
 
         <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-site-plugin</artifactId>
-          <version>3.0</version>
+          <version>${maven.site.version}</version>
         </plugin>
 
         <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-report-plugin</artifactId>
-          <version>2.11</version>
+          <version>3.0.0-M5</version>
         </plugin>
 
         <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-plugin</artifactId>
-          <version>2.11</version>
+          <version>3.0.0-M5</version>
         </plugin>
 
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>findbugs-maven-plugin</artifactId>
-          <version>2.3.3</version>
+          <version>4.0.0</version>
         </plugin>
 
         <plugin>
@@ -157,7 +182,7 @@
         <plugin>
           <groupId>org.mortbay.jetty</groupId>
           <artifactId>jetty-maven-plugin</artifactId>
-          <version>8.0.0.M1</version>
+          <version>8.1.0.M1</version>
         </plugin>
       </plugins>
     </pluginManagement>
@@ -179,29 +204,29 @@
 
       <dependency>
         <groupId>junit</groupId>
-        <artifactId>junit-dep</artifactId>
-        <version>4.10</version>
+        <artifactId>junit</artifactId>
+        <version>4.13.2</version>
         <scope>test</scope>
       </dependency>
 
       <dependency>
         <groupId>org.hamcrest</groupId>
         <artifactId>hamcrest-core</artifactId>
-        <version>1.2.1</version>
+        <version>2.2</version>
         <scope>test</scope>
       </dependency>
 
       <dependency>
         <groupId>org.hamcrest</groupId>
         <artifactId>hamcrest-library</artifactId>
-        <version>1.2.1</version>
+        <version>2.2</version>
         <scope>test</scope>
       </dependency>
 
       <dependency>
         <groupId>org.mockito</groupId>
         <artifactId>mockito-core</artifactId>
-        <version>1.8.5</version>
+        <version>5.3.1</version>
         <scope>test</scope>
       </dependency>
     </dependencies>
@@ -215,7 +240,8 @@
   </scm>
 
   <prerequisites>
-    <maven>3.0.3</maven>
+    <maven>3.8.4</maven>
   </prerequisites>
 
 </project>
+
