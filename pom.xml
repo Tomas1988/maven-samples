@@ -20,8 +20,8 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.8.1</version> <!-- Usar una versión reciente del plugin -->
         <configuration>
-          <source>17</source> <!-- Establecer la versión del código fuente -->
-          <target>17</target> <!-- Establecer la versión del bytecode objetivo -->
+          <source>17.0.12</source> <!-- Establecer la versión del código fuente -->
+          <target>17.0.12</target> <!-- Establecer la versión del bytecode objetivo -->
         </configuration>
       </plugin>
     </plugins>
