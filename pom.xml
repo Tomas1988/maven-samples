@@ -2,35 +2,30 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
-
   <groupId>com.example.maven-samples</groupId>
   <artifactId>parent</artifactId>
-  <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>Parent</name>
-  <description>Just a pom that makes it easy to build both projects at the same time.</description>
+  <packaging>pom</packaging>
 
+  <!-- Define your modules here -->
   <modules>
     <module>multi-module</module>
     <module>single-module</module>
   </modules>
-
-  <prerequisites>
-    <maven>3.0.3</maven>
-  </prerequisites>
 
   <build>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.8.1</version>
+        <version>3.8.1</version> <!-- Usar una versión reciente del plugin -->
         <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
+          <source>17</source> <!-- Establecer la versión del código fuente -->
+          <target>17</target> <!-- Establecer la versión del bytecode objetivo -->
         </configuration>
       </plugin>
     </plugins>
   </build>
 
 </project>
+
