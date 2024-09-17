@@ -12,8 +12,6 @@
   <modules>
     <module>multi-module</module>
     <module>single-module</module>
-    <module>server</module> <!-- Agregar el módulo 'server' -->
-    <module>webapp</module> <!-- Asegúrate de incluir el módulo webapp si existe -->
   </modules>
 
   <build>
