@@ -2,15 +2,18 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
+
   <groupId>com.example.maven-samples</groupId>
   <artifactId>parent</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <!-- Define your modules here -->
+  <!-- Módulos del proyecto -->
   <modules>
     <module>multi-module</module>
     <module>single-module</module>
+    <module>server</module> <!-- Agregar el módulo 'server' -->
+    <module>webapp</module> <!-- Asegúrate de incluir el módulo webapp si existe -->
   </modules>
 
   <build>
@@ -20,8 +23,8 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.9.0</version> <!-- Usar una versión reciente del plugin -->
         <configuration>
-          <source>17</source> <!-- Establecer la versión del código fuente -->
-          <target>17</target> <!-- Establecer la versión del bytecode objetivo -->
+          <source>17</source> <!-- Establecer la versión del código fuente a 17 -->
+          <target>17</target> <!-- Establecer la versión del bytecode objetivo a 17 -->
         </configuration>
       </plugin>
     </plugins>
